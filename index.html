@@ -1,175 +1,211 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bakes by Maissan & Noah</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cupcakes by Maissan & Noah</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
       background-color: #fff0f5;
       color: #333;
+      margin: 0; padding: 0;
     }
-
     header {
       background-color: #ff69b4;
       color: white;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
     }
-
-    nav {
-      background-color: #ffc0cb;
-      padding: 10px;
-      text-align: center;
+    header h1 {
+      margin: 0;
+      font-size: 36px;
     }
-
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
-
     .content {
-      padding: 20px;
       max-width: 800px;
-      margin: auto;
+      margin: 40px auto;
+      padding: 20px;
     }
-
     .cupcake {
       background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 15px;
+      border-radius: 12px;
+      padding: 20px;
       margin-bottom: 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-
-    footer {
-      background-color: #ff69b4;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
+    .cupcake h2 {
+      margin: 0 10px 0 0;
+      color: #d63384;
+      flex-grow: 1;
     }
-
+    .price {
+      font-weight: bold;
+      font-size: 18px;
+      color: #555;
+      min-width: 70px;
+      text-align: right;
+    }
     form {
-      background-color: #fff;
+      background: #fff;
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-top: 30px;
     }
-
     label {
       display: block;
       margin-top: 15px;
       font-weight: bold;
     }
-
     input, select, textarea {
       width: 100%;
       padding: 10px;
       margin-top: 5px;
       border-radius: 5px;
       border: 1px solid #ccc;
+      box-sizing: border-box;
     }
-
     button {
-      background-color: #ff69b4;
-      color: white;
-      padding: 10px 20px;
       margin-top: 20px;
+      background-color: #ff69b4;
       border: none;
+      color: white;
+      padding: 12px 25px;
       border-radius: 5px;
       cursor: pointer;
+      font-size: 16px;
     }
-
     button:hover {
-      background-color: #ff1493;
+      background-color: #d63384;
+    }
+    footer {
+      text-align: center;
+      background-color: #ff69b4;
+      color: white;
+      padding: 25px 20px;
+      margin-top: 40px;
+    }
+    footer p {
+      margin: 5px 0;
+      font-weight: bold;
+    }
+    .info {
+      background: #fff0f5;
+      border-left: 4px solid #ff69b4;
+      padding: 10px 15px;
+      margin-top: 20px;
+      font-style: italic;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Bakes by Maissan & Noah</h1>
-  <p>De zoetste cupcakes in de stad!</p>
+  <h1>Cupcakes by Maissan & Noah</h1>
+  <p>Heerlijke, eenvoudige cupcakes voor elke gelegenheid</p>
 </header>
 
-<nav>
-  <a href="#home">Home</a>
-  <a href="#menu">Menu</a>
-  <a href="#bestellen">Bestellen</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<div class="content" id="home">
-  <h2>Welkom bij Bakes by Maissan & Noah!</h2>
-  <p>Wij maken ambachtelijke cupcakes met liefde en creativiteit. Perfect voor feestjes, verjaardagen of gewoon een verwenmomentje.</p>
-
-  <h2 id="menu">Ons Menu</h2>
+<div class="content">
 
   <div class="cupcake">
-    <h3>Chocolade Droom – €2,50</h3>
-    <p>Rijke chocoladecake met romige ganache-topping.</p>
+    <h2>Vanille Cupcake</h2>
+    <div class="price">€1,00</div>
   </div>
 
   <div class="cupcake">
-    <h3>Vanille Hemel – €2,00</h3>
-    <p>Vanillecake met een vleugje citroen en een swirl van botercrème.</p>
+    <h2>Chocolade Cupcake</h2>
+    <div class="price">€1,00</div>
   </div>
 
   <div class="cupcake">
-    <h3>Aardbei Fantasie – €2,20</h3>
-    <p>Verse aardbeien verwerkt in zowel de cake als de topping.</p>
+    <h2>Aardbei Cupcake</h2>
+    <div class="price">€1,00</div>
   </div>
 
-  <h2 id="bestellen">Bestel hier</h2>
-  <form onsubmit="verzenden(); return false;">
-    <label for="naam">Naam</label>
-    <input type="text" id="naam" required>
+  <div class="cupcake">
+    <h2>Citroen Cupcake</h2>
+    <div class="price">€1,00</div>
+  </div>
 
-    <label for="email">E-mailadres</label>
-    <input type="email" id="email" required>
+  <form id="bestelformulier" onsubmit="return bestel();">
+    <h2>Bestel jouw cupcakes</h2>
+    
+    <label for="naam">Naam *</label>
+    <input type="text" id="naam" required />
 
-    <label for="aantal">Aantal cupcakes</label>
-    <input type="number" id="aantal" min="1" required>
+    <label for="email">E-mailadres *</label>
+    <input type="email" id="email" required />
 
-    <label for="smaak">Kies een smaak</label>
-    <select id="smaak" required>
-      <option value="">-- Selecteer --</option>
-      <option value="chocolade">Chocolade Droom – €2,50</option>
-      <option value="vanille">Vanille Hemel – €2,00</option>
-      <option value="aardbei">Aardbei Fantasie – €2,20</option>
+    <label for="telefoon">Telefoonnummer *</label>
+    <input type="tel" id="telefoon" required />
+
+    <label for="cupcake">Kies een cupcake *</label>
+    <select id="cupcake" required>
+      <option value="">-- Kies een cupcake --</option>
+      <option value="Vanille Cupcake">Vanille Cupcake (€2,50)</option>
+      <option value="Chocolade Cupcake">Chocolade Cupcake (€2,75)</option>
+      <option value="Aardbei Cupcake">Aardbei Cupcake (€2,80)</option>
+      <option value="Citroen Cupcake">Citroen Cupcake (€2,60)</option>
     </select>
 
-    <label for="opmerking">Opmerkingen (optioneel)</label>
-    <textarea id="opmerking" rows="3"></textarea>
+    <label for="aantal">Aantal *</label>
+    <input type="number" id="aantal" min="1" value="1" required />
 
-    <button type="submit">Bestelling plaatsen</button>
+    <label for="adres">Bezorgadres *</label>
+    <textarea id="adres" rows="3" required placeholder="Straat, huisnummer, postcode, stad"></textarea>
+
+    <p class="info">
+      Let op: je betaalt bij bezorging aan de deur. Wij komen het persoonlijk bij je thuis bezorgen.
+    </p>
+
+    <button type="submit">Bestelling verzenden</button>
   </form>
 
-  <div id="bevestiging" style="margin-top: 20px; font-weight: bold; color: green;"></div>
-
-  <h2 id="contact">Contact</h2>
-  <p>📞 Bel ons op: 0491 11 79 67</p>
-  <p>📧 E-mail: indepente@live.nl</p>
+  <div id="bericht" style="margin-top:20px; font-weight:bold; color:green;"></div>
 </div>
 
 <footer>
-  &copy; 2025 Bakes by Maissan & Noah - Alle rechten voorbehouden
+  <p>📞 Telefoon: 0491 11 79 67</p>
+  <p>📧 E-mail: <a href="mailto:indepente@live.nl" style="color: white; text-decoration: underline;">indepente@live.nl</a></p>
+  <p>&copy; 2025 Cupcakes by Maissan & Noah – Alle rechten voorbehouden</p>
 </footer>
 
 <script>
-  function verzenden() {
-    const naam = document.getElementById("naam").value;
-    const smaak = document.getElementById("smaak").value;
-    const aantal = document.getElementById("aantal").value;
+  function bestel() {
+    const naam = document.getElementById('naam').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const telefoon = document.getElementById('telefoon').value.trim();
+    const cupcake = document.getElementById('cupcake').value;
+    const aantal = document.getElementById('aantal').value;
+    const adres = document.getElementById('adres').value.trim();
 
-    document.getElementById("bevestiging").innerText = 
-      `Bedankt ${naam}! Je bestelling van ${aantal} cupcake(s) met smaak "${smaak}" is ontvangen!`;
+    if (!naam || !email || !telefoon || !cupcake || !aantal || !adres) {
+      alert('Vul alsjeblieft alle verplichte velden in.');
+      return false;
+    }
+
+    const onderwerp = encodeURIComponent('Nieuwe cupcake bestelling van ' + naam);
+    const body = encodeURIComponent(
+      `Beste Maissan & Noah,\n\n` +
+      `Er is een nieuwe bestelling geplaatst:\n\n` +
+      `Naam: ${naam}\n` +
+      `E-mail: ${email}\n` +
+      `Telefoonnummer: ${telefoon}\n` +
+      `Cupcake: ${cupcake}\n` +
+      `Aantal: ${aantal}\n` +
+      `Bezorgadres: ${adres}\n\n` +
+      `Betaling: Bij bezorging aan de deur.\n\n` +
+      `Groetjes,\nJullie website`
+    );
+
+    window.location.href = `mailto:indepente@live.nl?subject=${onderwerp}&body=${body}`;
+
+    document.getElementById('bericht').innerText = 'Je mail-app opent om je bestelling te versturen.';
+
+    return false;
   }
 </script>
 
